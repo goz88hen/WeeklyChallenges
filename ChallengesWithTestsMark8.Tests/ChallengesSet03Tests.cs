@@ -80,13 +80,14 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData("correcthorsebatterystapl3", false)]
         [InlineData("CORRECTHORSEBATTERYSTAPLE", false)]
         [InlineData("C0RRECTHORS3BATTERYSTAPLE", false)]
+       
         public void PasswordContainsUpperLowerAndNumber(string password, bool expected)
         {
             // Arrange
             ChallengesSet03 challenger = new ChallengesSet03();
 
             // Act
-            bool actual = challenger.PasswordContainsUpperLowerAndNumber(password);
+            bool actual = challenger.PasswordContainsUpperLowerAndNumber(password); ;
 
             // Assert
             Assert.Equal(expected, actual);
@@ -105,6 +106,7 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData("+100", '+')]
         [InlineData("--i", '-')]
         [InlineData("\\test", '\\')]
+       
         public void GetFirstLetterOfString(string str, char expected)
         {
             // Arrange
@@ -222,7 +224,7 @@ namespace ChallengesWithTestsMark8.Tests
             ChallengesSet03 challenger = new ChallengesSet03();
 
             // Act
-            challenger.ChangeAllElementsToUppercase(values);
+            object value = challenger.ChangeAllElementsToUppercase(values);
 
             // Assert
             Assert.Equal(values.Length, expected.Length);
