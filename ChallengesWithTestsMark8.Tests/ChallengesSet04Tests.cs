@@ -55,16 +55,18 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(5, 2, -3, 4, -3)]
         [InlineData(8, 0, 3, 4, 0)]
         [InlineData(7, 5, 3, 4, 3)]
+
         public void GetSmallestNumber(int num1, int num2, int num3, int num4, int expected)
         {
             // Arrange
             ChallengesSet04 challenger = new ChallengesSet04();
 
             // Act
-            int actual = challenger.GetSmallestNumber(num1, num2, num3, num4);
+            int actual = GetSmallestNumber(num1, num2, num3, num4);
 
             // Assert
             Assert.Equal(expected, actual);
+        
         }
 
         [Theory]
