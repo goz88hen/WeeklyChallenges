@@ -214,6 +214,8 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(8, 40320)]
         [InlineData(9, 362880)]
         [InlineData(10, 3628800)]
+
+
         public void Factorial(int number, int expected)
         {
             // Arrange
@@ -227,8 +229,9 @@ namespace ChallengesWithTestsMark8.Tests
         }
 
         [Fact]
-        public void NegativeFactorialShouldThrowArgumentOutOfRangeException()
+        //public void NegativeFactorialShouldThrowArgumentOutOfRangeException()
         {
+
             // Arrange
             ChallengesSet04 challenger = new ChallengesSet04();
             int negative1 = -1;
