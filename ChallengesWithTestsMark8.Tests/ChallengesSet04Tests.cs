@@ -16,7 +16,7 @@ namespace ChallengesWithTestsMark8.Tests
         public void AddEvenSubtractOdd(int[] numbers, int expected)
         {
             // Arrange
-            ChallengesSet04 challenger = new ChallengesSet04();
+            ChallengeSet04 challenger = new ChallengeSet04();
 
             // Act
             int actual = challenger.AddEvenSubtractOdd(numbers);
@@ -39,7 +39,7 @@ namespace ChallengesWithTestsMark8.Tests
         public void GetLengthOfShortestString(string string1, string string2, string string3, string string4, int expected)
         {
             // Arrange
-            ChallengesSet04 challenger = new ChallengesSet04();
+            ChallengeSet04 challenger = new ChallengeSet04();
 
             // Act
             int actual = challenger.GetLengthOfShortestString(string1, string2, string3, string4);
@@ -55,16 +55,18 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(5, 2, -3, 4, -3)]
         [InlineData(8, 0, 3, 4, 0)]
         [InlineData(7, 5, 3, 4, 3)]
+
         public void GetSmallestNumber(int num1, int num2, int num3, int num4, int expected)
         {
             // Arrange
-            ChallengesSet04 challenger = new ChallengesSet04();
+            ChallengeSet04 challenger = new ChallengeSet04();
 
             // Act
             int actual = challenger.GetSmallestNumber(num1, num2, num3, num4);
 
             // Assert
             Assert.Equal(expected, actual);
+
         }
 
         [Theory]
@@ -78,7 +80,7 @@ namespace ChallengesWithTestsMark8.Tests
         public void ChangeBusinessNameTo_TrueCoders(string originalBusinessName)
         {
             // Arrange
-            ChallengesSet04 challenger = new ChallengesSet04();
+            ChallengeSet04 challenger = new ChallengeSet04();
             Business business = new Business() { Name = originalBusinessName };
 
             // Act
@@ -111,7 +113,7 @@ namespace ChallengesWithTestsMark8.Tests
         public void CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3, bool expected)
         {
             // Arrange
-            ChallengesSet04 challenger = new ChallengesSet04();
+            ChallengeSet04 challenger = new ChallengeSet04();
 
             // Act
             bool actual = challenger.CouldFormTriangle(sideLength1, sideLength2, sideLength3);
@@ -136,7 +138,7 @@ namespace ChallengesWithTestsMark8.Tests
         public void IsStringANumber(string word, bool expected)
         {
             // Arrange
-            ChallengesSet04 challenger = new ChallengesSet04();
+            ChallengeSet04 challenger = new ChallengeSet04();
 
             // Act
             bool actual = challenger.IsStringANumber(word);
@@ -168,10 +170,11 @@ namespace ChallengesWithTestsMark8.Tests
         [InlineData(new object[] { null, null, '!', null, 4 }, true)]
         [InlineData(new object[] { null, false, null, null, '!', null, 4 }, true)]
         [InlineData(new object[] { null, null, new int[] { }, false, null, null, '!', null, 4 }, true)]
+
         public void MajorityOfElementsInArrayAreNull(object[] objects, bool expected)
         {
             // Arrange
-            ChallengesSet04 challenger = new ChallengesSet04();
+            ChallengeSet04 challenger = new ChallengeSet04();
 
             // Act
             bool actual = challenger.MajorityOfElementsInArrayAreNull(objects);
@@ -193,7 +196,7 @@ namespace ChallengesWithTestsMark8.Tests
         public void AverageEvens(int[] numbers, double expected)
         {
             // Arrange
-            ChallengesSet04 challenger = new ChallengesSet04();
+            ChallengeSet04 challenger = new ChallengeSet04();
 
             // Act
             double actual = challenger.AverageEvens(numbers);
@@ -219,7 +222,7 @@ namespace ChallengesWithTestsMark8.Tests
         public void Factorial(int number, int expected)
         {
             // Arrange
-            ChallengesSet04 challenger = new ChallengesSet04();
+            ChallengeSet04 challenger = new ChallengeSet04();
 
             // Act
             int actual = challenger.Factorial(number);
@@ -228,12 +231,11 @@ namespace ChallengesWithTestsMark8.Tests
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        //public void NegativeFactorialShouldThrowArgumentOutOfRangeException()
+        public void NegativeFactorial()
         {
 
             // Arrange
-            ChallengesSet04 challenger = new ChallengesSet04();
+            ChallengeSet04 challenger = new ChallengeSet04();
             int negative1 = -1;
             int negative2 = -2;
             int negative3 = -3;
