@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ChallengesWithTestsMark8
@@ -83,12 +84,23 @@ namespace ChallengesWithTestsMark8
         }
         public int Factorial(int number)
         {
-            if (number == 0)
+            var fact = 1;
+
+            if (number < 0)
             {
-                return 1;
+                throw new ArgumentOutOfRangeException ("negativw number");
             }
-            return number * Factorial(number - 1);
+
+            for (int i = number; i > 0; i--) 
+            {
+                fact *= i;
+            }
+            return fact;
+            
+
             
         }
+       
+       
     }
 }

@@ -230,8 +230,8 @@ namespace ChallengesWithTestsMark8.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-
-        public void NegativeFactorial()
+        [Fact]
+        public void NegativeFactorialShouldThrowArgumentOutOfRangeException()
         {
 
             // Arrange
